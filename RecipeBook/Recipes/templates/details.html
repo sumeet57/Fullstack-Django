@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={% static 'details.css' %}>
+</head>
+<body>
+    <div>
+        <h1>{{ recipe.title }}</h1>
+        <h2>{{ recipe.description }}</h2>
+        <div class="box">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>{{ recipe.ingredients }}</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h3>Instructions</h3>
+            <p>{{ recipe.instructions }}</p>
+        </div>
+
+        <img src={{ recipe.image.src }} alt={{ recipe.title }}>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body{
+    background-color: #c9ff8c;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    color: #ff8c8c;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 4px;
+}
+
+.box{
+    width: 400px;
+    height: fit-content;
+    background-color: azure;
+    margin: 20px;
+    text-align: center;
+}
+div h3{
+    color: #1da196;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+}

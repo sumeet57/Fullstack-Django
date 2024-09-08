@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={% static 'recipes.css' %}>
+</head>
+<body>
+    <h1>Total {{ len }} Recipes</h1>
+    {% for recipes in recipes %}
+    <div class="box">
+        
+        <a href={% url 'details' recipes.id %}>
+        <h3>{{ recipes.title }}</h3>
+        </a>
+    </div><br>
+    {% endfor %}
+</body>
+</html>

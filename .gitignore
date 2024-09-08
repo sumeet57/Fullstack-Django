@@ -1,0 +1,4 @@
+**.venv
+**__pycache__/
+**uploads/images/
+**db.sqlite3
