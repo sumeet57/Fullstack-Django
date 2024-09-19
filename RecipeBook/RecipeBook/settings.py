@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Recipes',
+    'auth_app',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads/')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'auth_app.User'
+# REDIRECT_URL = '/recipes/'
+
+LOGIN_REDIRECT_URL = '/recipes/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

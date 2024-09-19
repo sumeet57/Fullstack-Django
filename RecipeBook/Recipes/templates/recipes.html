@@ -9,6 +9,18 @@
 </head>
 <body>
     <h1>Total {{ len }} Recipes</h1>
+    <h3>
+        {% if user.is_authenticated %}
+    <form action={% url "logout" %} method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+
+    </form>
+    <a href={% url "password_reset" %}>
+        <button>Change Password</button>
+    </a>
+     {% endif %}
+    </h3>
     {% for recipes in recipes %}
     <div class="box">
         
