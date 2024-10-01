@@ -28,3 +28,18 @@ def recipe_delete(request, id):
             return redirect('details', id=id)
     else:
         return redirect('login')
+    
+def recipe_update(request, id):
+    recipe = Recipe.objects.get(id=id)
+    if request.user == recipe.author:
+        if request.method == 'POST':
+            form = RecipeForm(request.POST, instance=recipe)
+            if form.is_valid():
+                form.save()
+                return redirect(details, id=id)
+            
+        else:
+            form = RecipeForm(instance=recipe)
+            return render(request, 'recipe_update_form.html', {'form': form})
+    else:
+        return redirect('details', id=id)
